@@ -10,4 +10,6 @@ main(){
 
     printf("These are the numbers in the right order:\n%d %d %d %d",num1, num2, num3, num4);
     printf("\nAnd these are the number in the reversed order: %d %d %d %d", num4, num3, num2, num1);
+
+    return 0;
 }

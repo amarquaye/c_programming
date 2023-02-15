@@ -17,4 +17,6 @@ main(){
 
     /* Displaying results */
     printf("Your heart has been beating for %ld times in your lifetime!", rate);
+
+    return 0;
 }

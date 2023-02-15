@@ -12,4 +12,6 @@ main(){
     celsius = (fahrenheit - 32.0) * (5.0/9.0);
 
     printf("%.2f degrees Fahrenheit is equivalent to %.2f degrees Celsius", fahrenheit, celsius);
+
+    return 0;
 }
