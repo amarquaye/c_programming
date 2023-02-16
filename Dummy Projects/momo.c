@@ -11,11 +11,13 @@ main(){
     float tax;
     float totalAmount;
     int pin;
+    char receiverName[50];
+    int secretCode;
 
     
 
-    
 
+    /* Beginning of code */
     printf("Menu\n");
     printf("1) Transfer Money\n");
     printf("2) MoMoPay & Pay Bill\n");
@@ -32,7 +34,7 @@ main(){
         printf("1) MoMo User\n");
         printf("2) Non MoMo User\n");
         printf("3) Send with Care\n");
-        printf("4) favorite\n");
+        printf("4) Favorite\n");
         printf("5) Other Networks\n");
         printf("6) Bank Account\n");
         printf("0) Back\n\n");
@@ -48,19 +50,45 @@ main(){
             printf("\nConfirm Number: ");
             scanf("%d", &mobileNumber);
             printf("\nEnter amount: ");
-            scanf("%d", &amount);
+            scanf("%f", &amount);
             printf("\nEnter Reference: ");
             scanf("%d", &ref);
 
+            
+            /* Formula */
             tax = amount * 0.01;
             totalAmount = amount + tax;
-            printf("\nTransfer to - 0%d for %.2f with Reference: %d.\nFee is GHS 0.00, Tax amount is %f.\nTotal Amount is %.2f.\nEnter MM PIN or 2 to cancel.\n", mobileNumber, amount, ref, tax, totalAmount);
+
+            printf("\nTransfer to - 0%d for GHS %.2f with Reference: %d.\nFee is GHS 0.00, Tax amount is GHS %.2f.\nTotal Amount is GHS %.2f.\nEnter MM PIN or 2 to cancel.\n", mobileNumber, amount, ref, tax, totalAmount);
             scanf("%d", &pin);
+            printf("\nYou have sent GHS %.2f to - 0%d.\nFee: GHS 0.00.\nTax: GHS %.2f.\nTransaction ID 12345678910.\nThank you for using Mobile Money (:", amount, mobileNumber, tax);
+            /* To be continued... */
             break;
+            
+        case 2 :
+            printf("\nEnter Receiver Name\n");
+            scanf("%s", &receiverName);
+            printf("\nEnter Amount\n");
+            scanf("%f", &amount);
+            printf("\nEnter Reference\n");
+            scanf("%d", &ref);
+            printf("\nEnter Secret Code\n");
+            scanf("%d", &secretCode);
+            printf("\nConfirm Secret Code\n");
+            scanf("%d", &secretCode);
+
+            /* Formula */
+            tax = amount * 0.01;
+            totalAmount = amount + 1.50 + tax;
+
+            printf("\nFee is GHS 1.50, Tax amount is GHS %.2f and Total Amount is GHS %.2f.\nEnter MM PIN or 2 to cancel.\n", tax, totalAmount);
+            /* To be continued ...*/
         
         default:
             break;
         }
+    
+    break;
 
     case 2 :
         printf("MoMo Pay & Pay Bill\n");
