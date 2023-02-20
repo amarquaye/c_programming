@@ -2,8 +2,8 @@
 
 #include <stdio.h>
 
-/* Transfer money page */
-transferMoney(int num, int mobileNumber, float amount, int ref, float tax, float totalAmount, int pin){
+/* 1) Transfer money page */
+void transferMoney(int num, int mobileNumber, float amount, int ref, float tax, float totalAmount, int pin){
     printf("1) MoMo User\n");
     printf("2) Non MoMo User\n");
     printf("3) Send with Care\n");
@@ -41,6 +41,36 @@ transferMoney(int num, int mobileNumber, float amount, int ref, float tax, float
         }
 }
 
+/* 4) Allow Cash Out */
+int allowCashOutFunc(num){
+    printf("\nAllow Cash Out\n");
+    printf("1) Yes\n");
+    printf("2) No\n");
+    printf("0) Back\n");
+
+    printf("\nEnter your choice: ");
+
+    scanf("%d", &num);
+
+    switch (num)
+    {
+    case 1 :
+        printf("\nCash Out is Allowed\n");
+        break;
+    
+    case 2 :
+        printf("\nCash Out is not Allowed\n");
+        break;
+
+    case 0 :
+        void main();
+    default:
+        printf("\nPlease enter a valid response\nAn example is entering either 1, 2 or 0\n");
+
+        break;
+    }
+}
+
 /* Main Function */
 void main(){
 
@@ -70,6 +100,9 @@ void main(){
         transferMoney(num, mobileNumber, amount, ref, tax, totalAmount, pin);
         break;
     
+    case 4 :
+        allowCashOutFunc(num);
+        break;
     default:
         break;
     }
