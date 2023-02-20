@@ -41,6 +41,31 @@ void transferMoney(int num, int mobileNumber, float amount, int ref, float tax, 
         }
 }
 
+/* 2) MoMoPay & Pay Bill page */
+void momopayAndPayBillFunc(int num, int ref){
+    printf("\nMoMoPay & Pay Bill\n");
+    printf("1) MoMoPay\n");
+    printf("2) Pay Bill\n");
+    printf("3) GhQR\n");
+    printf("0) Back\n");
+
+    printf("\nEnter your choice: ");
+
+    scanf("%d", &num);
+
+    switch (num)
+    {
+    case 1 :
+        printf("\nEnter Merchat ID / Payment Reference: ");
+        scanf("%d", &ref);
+        /* To be continued */
+        break;
+    /* Continuation of switch case for momopay and pay bill */
+    default:
+        break;
+    }
+}
+
 /* 3) Airtime & Bundles page*/
 int airtimeAndBundlesFunc(int num, float amount){
     printf("\nAirtime & Bundles\n");
@@ -148,6 +173,10 @@ void main(){
         transferMoney(num, mobileNumber, amount, ref, tax, totalAmount, pin);
         break;
     
+    case 2 :
+        momopayAndPayBillFunc(num, ref);
+        break;
+        
     case 3 :
         airtimeAndBundlesFunc(num, amount);
         break;
