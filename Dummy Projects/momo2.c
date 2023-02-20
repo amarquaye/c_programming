@@ -41,8 +41,55 @@ void transferMoney(int num, int mobileNumber, float amount, int ref, float tax, 
         }
 }
 
+/* 3) Airtime & Bundles page*/
+int airtimeAndBundlesFunc(int num, float amount){
+    printf("\nAirtime & Bundles\n");
+    printf("1) Airtime\n");
+    printf("2) Internet Bundles\n");
+    printf("3) Fixed Broadband\n");
+    printf("4) Schedule Airtime\n");
+    printf("0) Back\n");
+
+    printf("\nEnter your choice: ");
+
+    scanf("%d", &num);
+
+    switch (num)
+    {
+    case 1 :
+        printf("\nAirtime\n");
+        printf("1) Self\n");
+        printf("2) Others\n");
+        printf("3) Welcome Pack\n");
+        printf("4) Other Networks\n");
+        printf("0) Back\n");
+
+        printf("\nEnter your choice: ");
+
+        scanf("%d", &num);
+
+        switch (num)
+        {
+        case 1 :
+            printf("\nEnter amount: ");
+            scanf("%f", &amount);
+            break;
+
+        /* Continuation of second switch case for buying airtiime */
+        default:
+            break;
+        }
+
+        break;
+    
+    /* Continuation of first switch case for airtime and bundles */
+    default:
+        break;
+    }
+}
+
 /* 4) Allow Cash Out */
-int allowCashOutFunc(num){
+int allowCashOutFunc(int num){
     printf("\nAllow Cash Out\n");
     printf("1) Yes\n");
     printf("2) No\n");
@@ -94,12 +141,17 @@ void main(){
     printf("\nEnter your choice: ");
     scanf("%d", &num);
 
+    /* Main switch function */
     switch (num)
     {
     case 1 :
         transferMoney(num, mobileNumber, amount, ref, tax, totalAmount, pin);
         break;
     
+    case 3 :
+        airtimeAndBundlesFunc(num, amount);
+        break;
+
     case 4 :
         allowCashOutFunc(num);
         break;
