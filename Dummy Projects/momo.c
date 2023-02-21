@@ -83,6 +83,29 @@ main(){
 
             printf("\nFee is GHS 1.50, Tax amount is GHS %.2f and Total Amount is GHS %.2f.\nEnter MM PIN or 2 to cancel.\n", tax, totalAmount);
             /* To be continued ...*/
+            break;
+        case 3 :
+            printf("\nSend with Care\n");
+            printf("1) Mobile User\n");
+            printf("2) MyCaretaker\n");
+            printf("3) AYO Send with Care Balances or Claim\n");
+            printf("0) Back");
+
+            switch (num)
+            {
+            case 1 :
+                printf("\nPlease enter recipient's mobile number\n");
+                scanf("%d", mobileNumber);
+                printf("\nPlease repeat the recipient's mobile number\n");
+                scanf("%d", mobileNumber);
+                printf("\nPlease enter amount\n");
+                scanf("%f", &amount);
+                printf("\nServer is undergoing maintenance, please try again later.");
+                break;
+            
+            default:
+                break;
+            }
         
         default:
             break;
@@ -105,8 +128,23 @@ main(){
         printf("3) Fixed Broadband\n");
         printf("4) Schedule Airtime\n");
         printf("0) Back\n");
+        
+        switch (num)
+        {
+        case 1 :
+            printf("\nAirtime\n");
+            printf("1) Self\n");
+            printf("2) Others\n");
+            printf("3) Welcome Pack\n");
+            printf("4) Other Networks\n");
+            printf("0) Back\n");
+            break;
+        
         break;
-
+        default:
+            break;
+        }
+    
     case 4 :
         printf("Allow Cash Out\n");
         printf("1) Yes\n");
